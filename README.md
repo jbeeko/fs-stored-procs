@@ -102,6 +102,7 @@ var helloWorld = function () {
 
 For one thing there is that `();` at the end of function. But that aside this is just HelloWorld and it has not even been registered and executed. The above is not even a proof of concept. Proof of plausibility? Perhaps. Some next steps are:
 
+* Get a feel for the size of the DocumentDB SDK. I it just the context object and a few functions or is it huge. Can it be loaded on the F# side or will mock API's need to be created?
 * Determine if it is possible to extend the JavaScript environment on the DocumentDB side with the various shims that will be needed as the F# code gets more complex.
     - Sort of. Not external resouces but they can be embeded in the [procedure](http://stackoverflow.com/questions/29893903/is-there-a-way-of-using-javascript-libraries-in-azure-documentdb-server-code)
     - The main.js file is 214k which is getting close to the 256K/stored procedure limit
