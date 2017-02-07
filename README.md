@@ -88,7 +88,13 @@ let getContext =
     request = {data = "this is a request"}}
 ```
 to main.fs it compiled. Buiding and the app results in this in the main.js file:
-![helloWorld function](docs\hello.png)
+```
+var helloWorld = function () {
+    var context = getContext;
+    var response = context.getResponse;
+    response.setBody("Hello World");
+}();
+```
 
 **Success!** - well perhaps not quite.  
 
