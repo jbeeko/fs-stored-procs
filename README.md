@@ -62,7 +62,7 @@ function () {
     }
 ```
 
-But of course the F# code will not compile without `getContext` and other referenced types. The simplest thing I could think of was to write some F# scaffolding to implement `getContext` and other elements of the DocumentDB SDK referenced. I imagine referening that SDK would also work. So after adding this
+But of course the F# code will not compile without `getContext` and other referenced types. The simplest thing I could think of was to write some F# scaffolding to implement `getContext` and other elements of the DocumentDB SDK referenced. I imagine referening that SDK would also work. So after adding
 
 ```
 type HTTPBody = {
@@ -90,7 +90,7 @@ let getContext =
 to main.fs it compiled. Buiding and the app results in this in the main.js file:
 ![helloWorld function](./docs/hello.png "helloWorld function")
 
-Success! - well perhaps not quite. For one thing there is that `();` at the end of function. But that aside this is just HelloWorld and it has not even been registered and executed. 
+**Success!** - well perhaps not quite. For one thing there is that `();` at the end of function. But that aside this is just HelloWorld and it has not even been registered and executed. 
 
 ## Next Steps
 
