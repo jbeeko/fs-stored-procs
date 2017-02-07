@@ -90,11 +90,11 @@ let getContext =
 to main.fs it compiled. Buiding and the app results in this in the main.js file:
 ![helloWorld function](./docs/hello.png "helloWorld function")
 
-**Success!** - well perhaps not quite. For one thing there is that `();` at the end of function. But that aside this is just HelloWorld and it has not even been registered and executed. 
+**Success!** - well perhaps not quite.  
 
 ## Next Steps
 
-The above is not even a proof of concept. Proof of plausibility? Perhaps. The next steps are:
+For one thing there is that `();` at the end of function. But that aside this is just HelloWorld and it has not even been registered and executed. The above is not even a proof of concept. Proof of plausibility? Perhaps. Some next steps are:
 
 * Figure out how to have Fable generate the JavaScript for a single function as a string rather than writing it to the index.html file.
 * Determine if it is possible to extend the JavaScript environment on the DocumentDB side with the various shims that will be needed as the F# code gets more complex.
