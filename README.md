@@ -1,6 +1,6 @@
 # DocumentDB StoredProcs in F# via Fable 
 
-This repositry is an exploration of how to write DocumentDB stored procedures using F#. This scenario is not supported by Microsoft, The idea is to write a stored procedure in F#, use Fable to compile to JavaScript and register it with DocumentDB using the standard API for this. 
+This repository is an exploration of how to write DocumentDB stored procedures using F#. This scenario is not supported by Microsoft, The idea is to write a stored procedure in F#, use Fable to compile to JavaScript and register it with DocumentDB using the standard API for this. 
 
 ## DocumentDB
 [DocumentDB](https://azure.microsoft.com/en-us/services/documentdb/) is a Microsoft NonSQL database for the storage, reteival and manipulation of JSON based documents. Documents may be added, modified and removed using a number of client side APIs. This means any languages that support those APIs may be used, [for example](https://docs.microsoft.com/en-us/dotnet/articles/fsharp/using-fsharp-on-azure/#using-azure-documentdb-with-f). However to make transactional changes to multiple documents the changes must be done using a [JavaScript stored procedure](https://www.documentdb.com/javascript/tutorial). The workflow is to write the procedure in Java Script and use DocumentDB calls to register and invoke the stored procedure. If done using the .Net SDK that will look something like this:
