@@ -1,0 +1,11 @@
+/dist/test/
+/dist/umd/
+/node_modules/
+
+/npm-debug.log
+/yarn-error.log
+
+/test/bin
+/test/obj
+/src/bin
+/src/obj
