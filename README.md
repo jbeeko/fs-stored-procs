@@ -88,7 +88,7 @@ let getContext =
     request = {data = "this is a request"}}
 ```
 to main.fs it compiled. Buiding and the app results in this in the main.js file:
-![helloWorld function](docs/hello.png "helloWorld function")
+![helloWorld function](docs/hello.png)
 
 **Success!** - well perhaps not quite.  
 
