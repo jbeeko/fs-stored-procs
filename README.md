@@ -102,8 +102,12 @@ var helloWorld = function () {
 
 For one thing there is that `();` at the end of function. But that aside this is just HelloWorld and it has not even been registered and executed. The above is not even a proof of concept. Proof of plausibility? Perhaps. Some next steps are:
 
-* Figure out how to have Fable generate the JavaScript for a single function as a string rather than writing it to the index.html file.
 * Determine if it is possible to extend the JavaScript environment on the DocumentDB side with the various shims that will be needed as the F# code gets more complex.
+    - Sort of. Not external resouces but they can be embeded in the [procedure](http://stackoverflow.com/questions/29893903/is-there-a-way-of-using-javascript-libraries-in-azure-documentdb-server-code)
+    - The main.js file is 214k which is getting close to the 256K/stored procedure limit
+* Figure out how to have Fable generate the JavaScript for a single function as a string rather than writing it to the index.html file. And because DocumentDB can't reference external resources it also needs to embed the various shims needed into the function. 
+    - There is a feature request into DocumentDB to allow access to external [resouces](https://feedback.azure.com/forums/263030-documentdb/suggestions/7724601-the-ability-to-reference-javascript-libraries-e-g).
+    - also a utility [documentdb-utils](https://github.com/lmaccherone/documentdb-utils#support-for-require-in-server-side-scripts) that supports `require()` in server scripts
 * Test registering the stored procedure and then executing it
 * Figure out how document parameters work and how to map between the F# types and the stored procedure types.
 
