@@ -45,14 +45,14 @@ Along with cross complied JavaScript function there is lot of other JavaScript i
 To write F# stored procedures we need to compile the F# code to JavaScript, then register the stored procedure using the .net SDK. 
 
 ### Compilation
-Going back to [`Hello World`](https://www.documentdb.com/javascript/tutorial). To write the equivalent "Hello World" in F# like this
+Going back to [`Hello World`](https://www.documentdb.com/javascript/tutorial). We can write the equivalent "Hello World" in F# like this
 ```
 let helloWorld =
     let context = getContext
     let response = context.getResponse
     response.setBody("Hello World")
 ```
-What we would like is for the tooling to generate the following JavaScript from the example. 
+What we would like is for the tooling to generate the same JavaScript as in the example. 
 
 ```
 function () {
@@ -62,9 +62,10 @@ function () {
     }
 ```
 
-But of course the F# code will not compile as written. The simplest thing I could think of was to write some F# scaffolding to implement `getContext` and other elements of the DocumentDB SDK referenced. I imagine referening that SDK would also work. So after adding this
+But of course the F# code will not compile without `getContext` and other referenced types. The simplest thing I could think of was to write some F# scaffolding to implement `getContext` and other elements of the DocumentDB SDK referenced. I imagine referening that SDK would also work. So after adding this
 
-```type HTTPBody = {
+```
+type HTTPBody = {
     mutable data : string
     }
     with
